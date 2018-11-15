@@ -30,8 +30,8 @@ pipeline {
         docker 'fabric8/java-centos-openjdk8-jdk:1.4.0'
       }
       steps {
-        sh 'wget $JENKINS_IP/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar'
-        sh 'java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 4 3'
+        sh "wget $JENKINS_IP/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+        sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 4 3"
       }
     }
     stage('debian') {
@@ -39,8 +39,8 @@ pipeline {
         docker 'openjdk:8u121-jre '
       }
       steps {
-        sh 'wget $JENKINS_IP/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar'
-        sh 'java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 4 3'      
+        sh "wget $JENKINS_IP/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
+        sh "java -jar rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar 4 3"    
       }
     }
   }
